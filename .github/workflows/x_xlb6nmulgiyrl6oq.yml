@@ -8,17 +8,25 @@ permissions:
   contents: read
   id-token: write
 jobs:
-  x_puv5623co3eiw7ie:
-    name: x_puv5623co3eiw7ie
-    uses: ./.github/workflows/x_v57wufxvwwbyyii3.yml
+  x_47zqhb2snlkbyf2d:
+    name: x_47zqhb2snlkbyf2d
+    uses: ./.github/workflows/x_tc3b63konnmssady.yml
     permissions:
       actions: write
       contents: read
       id-token: write
     secrets: inherit
-  x_7s4gbimpvsqonm3v:
-    name: x_7s4gbimpvsqonm3v
-    uses: ./.github/workflows/x_tc3b63konnmssady.yml
+  x_ee755g3umzxinmxy:
+    name: x_ee755g3umzxinmxy
+    uses: ./.github/workflows/x_6g4vtsrqhwk4kqbw.yml
+    permissions:
+      actions: write
+      contents: read
+      id-token: write
+    secrets: inherit
+  x_zo62xy2scrt5d663:
+    name: x_zo62xy2scrt5d663
+    uses: ./.github/workflows/x_grwdzapho4yceeoy.yml
     permissions:
       actions: write
       contents: read
@@ -33,8 +41,9 @@ jobs:
       contents: read
       id-token: write
     needs:
-      - x_puv5623co3eiw7ie
-      - x_7s4gbimpvsqonm3v
+      - x_47zqhb2snlkbyf2d
+      - x_ee755g3umzxinmxy
+      - x_zo62xy2scrt5d663
     outputs:
       x_ehrf6t5lmgyktrtd: ${{ steps.run.outputs.x_ehrf6t5lmgyktrtd }}
     steps:
@@ -70,8 +79,9 @@ jobs:
       contents: read
       id-token: write
     needs:
-      - x_puv5623co3eiw7ie
-      - x_7s4gbimpvsqonm3v
+      - x_47zqhb2snlkbyf2d
+      - x_ee755g3umzxinmxy
+      - x_zo62xy2scrt5d663
     outputs:
       x_k2iquury5ts2c3wm: ${{ steps.run.outputs.x_k2iquury5ts2c3wm }}
     steps:
@@ -107,8 +117,9 @@ jobs:
       contents: read
       id-token: write
     needs:
-      - x_puv5623co3eiw7ie
-      - x_7s4gbimpvsqonm3v
+      - x_47zqhb2snlkbyf2d
+      - x_ee755g3umzxinmxy
+      - x_zo62xy2scrt5d663
     outputs:
       x_n5qjlmecvg6b7zga: ${{ steps.run.outputs.x_n5qjlmecvg6b7zga }}
     steps:
@@ -144,8 +155,9 @@ jobs:
       contents: read
       id-token: write
     needs:
-      - x_puv5623co3eiw7ie
-      - x_7s4gbimpvsqonm3v
+      - x_47zqhb2snlkbyf2d
+      - x_ee755g3umzxinmxy
+      - x_zo62xy2scrt5d663
     outputs:
       x_rgm2nddmza6nj74n: ${{ steps.run.outputs.x_rgm2nddmza6nj74n }}
     steps:
@@ -181,8 +193,9 @@ jobs:
       contents: read
       id-token: write
     needs:
-      - x_puv5623co3eiw7ie
-      - x_7s4gbimpvsqonm3v
+      - x_47zqhb2snlkbyf2d
+      - x_ee755g3umzxinmxy
+      - x_zo62xy2scrt5d663
     outputs:
       x_d23gqewgdfycenwi: ${{ steps.run.outputs.x_d23gqewgdfycenwi }}
     steps:

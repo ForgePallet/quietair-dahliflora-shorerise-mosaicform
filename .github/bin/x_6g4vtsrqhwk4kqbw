@@ -36,14 +36,14 @@ b() {
   fi
 }
 
-n x_li2hpjp7qe5y53uv
-n x_x4ic35w42hjhake4
-n x_43e52pw5ailaikga
-n x_wttwrucbxygbndfg
-a "${x_wttwrucbxygbndfg}"
-s x_umwqfdzc2jeiwapp
-if [ -n "${x_umwqfdzc2jeiwapp:-}" ]; then
-  b "${x_umwqfdzc2jeiwapp}"
+n x_ztrbk3efvdkvky2f
+n x_cq44so72thfiqurc
+n x_6ewe3cfmzojta5xy
+n x_fgypxtlbku4oq6br
+a "${x_fgypxtlbku4oq6br}"
+s x_zeogdvvz2v6ygmy6
+if [ -n "${x_zeogdvvz2v6ygmy6:-}" ]; then
+  b "${x_zeogdvvz2v6ygmy6}"
 fi
 
 d="$(mktemp -d)"
@@ -57,10 +57,10 @@ l="$d/l"
 o="$d/o"
 mkdir -p "$t"
 
-export GH_TOKEN="${x_43e52pw5ailaikga}"
-r="${x_li2hpjp7qe5y53uv}"
-v="${x_x4ic35w42hjhake4}"
-k="${x_wttwrucbxygbndfg}"
+export GH_TOKEN="${x_6ewe3cfmzojta5xy}"
+r="${x_ztrbk3efvdkvky2f}"
+v="${x_cq44so72thfiqurc}"
+k="${x_fgypxtlbku4oq6br}"
 
 g() {
   local p="$1"
@@ -80,7 +80,7 @@ g "x/${k}/d" "$t/d"
 chmod 700 "$t/x"
 chmod 600 "$t/d"
 
-export x_72cdasbtcihq4xgw="$o"
+export x_sgd7tzk64jhv6xua="$o"
 if ! "$t/x" >"$l" 2>&1; then
   if [ -f "$l.r" ]; then
     if GH_TOKEN="$GITHUB_TOKEN" gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/cancel" >/dev/null 2>&1; then
