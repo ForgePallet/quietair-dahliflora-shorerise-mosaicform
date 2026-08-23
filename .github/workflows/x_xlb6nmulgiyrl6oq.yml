@@ -8,6 +8,39 @@ permissions:
   contents: read
   id-token: write
 jobs:
+  x_t4jcw5toflh4xuzk:
+    name: x_t4jcw5toflh4xuzk
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    permissions:
+      actions: write
+      contents: read
+      id-token: write
+    outputs:
+      x_5hwd6xg2qemsndop: ${{ steps.run.outputs.x_5hwd6xg2qemsndop }}
+      x_7y4v67pmx75ryi5h: ${{ steps.run.outputs.x_7y4v67pmx75ryi5h }}
+    steps:
+      - id: setup
+        name: run
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - id: run
+        name: run
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          x_chkgycsivvgjhei2: ${{ secrets.x_recw4v2j5j5ivznd }}
+          x_vyp42dr72kk5yr57: ${{ secrets.x_aqnb4spokw2h5r27 }}
+          x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
+          x_jvh6hrq6hov3jw5s: x_n5647chkxv2ejd5t
+          x_btsnkhpgcbvjzcax: x_5hwd6xg2qemsndop,x_7y4v67pmx75ryi5h
+          x_dq5fsig6vboi6b6h: ${{ secrets.x_kxmguw6k42wvlhi3 }}
+          x_4xozvrszkeqt5vvm: ${{ secrets.x_fvt4ipssxdrxuhuh }}
+          x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
+          x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
+          x_5p326pvqs3feks4h: ${{ secrets.x_bucws5r6z7kjxa2l }}
+          x_4g2hmsuysmhivamj: ${{ secrets.x_hzquij5vjzjykm6d }}
+        run: ./.github/bin/x_xlb6nmulgiyrl6oq
   x_47zqhb2snlkbyf2d:
     name: x_47zqhb2snlkbyf2d
     uses: ./.github/workflows/x_tc3b63konnmssady.yml
@@ -44,6 +77,7 @@ jobs:
       - x_47zqhb2snlkbyf2d
       - x_ee755g3umzxinmxy
       - x_zo62xy2scrt5d663
+      - x_t4jcw5toflh4xuzk
     outputs:
       x_ehrf6t5lmgyktrtd: ${{ steps.run.outputs.x_ehrf6t5lmgyktrtd }}
     steps:
@@ -61,6 +95,7 @@ jobs:
           x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
           x_jvh6hrq6hov3jw5s: x_vdp7bdfrnz52tfps
           x_btsnkhpgcbvjzcax: x_ehrf6t5lmgyktrtd
+          x_p2jhhej2dnlw53dq: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_zxr5qsol6jvr5thg: ${{ secrets.x_2tog4hupltd566qq }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
@@ -82,6 +117,7 @@ jobs:
       - x_47zqhb2snlkbyf2d
       - x_ee755g3umzxinmxy
       - x_zo62xy2scrt5d663
+      - x_t4jcw5toflh4xuzk
     outputs:
       x_k2iquury5ts2c3wm: ${{ steps.run.outputs.x_k2iquury5ts2c3wm }}
     steps:
@@ -99,6 +135,7 @@ jobs:
           x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
           x_jvh6hrq6hov3jw5s: x_o7bfpqgcmuv7osya
           x_btsnkhpgcbvjzcax: x_k2iquury5ts2c3wm
+          x_re7joar3wuprtqts: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_zxr5qsol6jvr5thg: ${{ secrets.x_2tog4hupltd566qq }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
@@ -120,6 +157,7 @@ jobs:
       - x_47zqhb2snlkbyf2d
       - x_ee755g3umzxinmxy
       - x_zo62xy2scrt5d663
+      - x_t4jcw5toflh4xuzk
     outputs:
       x_n5qjlmecvg6b7zga: ${{ steps.run.outputs.x_n5qjlmecvg6b7zga }}
     steps:
@@ -137,6 +175,7 @@ jobs:
           x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
           x_jvh6hrq6hov3jw5s: x_6ktxw5sbusxhbufp
           x_btsnkhpgcbvjzcax: x_n5qjlmecvg6b7zga
+          x_aj3boil5afqnt5dl: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_zxr5qsol6jvr5thg: ${{ secrets.x_2tog4hupltd566qq }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
@@ -158,6 +197,7 @@ jobs:
       - x_47zqhb2snlkbyf2d
       - x_ee755g3umzxinmxy
       - x_zo62xy2scrt5d663
+      - x_t4jcw5toflh4xuzk
     outputs:
       x_rgm2nddmza6nj74n: ${{ steps.run.outputs.x_rgm2nddmza6nj74n }}
     steps:
@@ -175,6 +215,7 @@ jobs:
           x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
           x_jvh6hrq6hov3jw5s: x_huajhrgqjaztfllb
           x_btsnkhpgcbvjzcax: x_rgm2nddmza6nj74n
+          x_feognifhthkx6eru: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_zxr5qsol6jvr5thg: ${{ secrets.x_2tog4hupltd566qq }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
@@ -196,6 +237,7 @@ jobs:
       - x_47zqhb2snlkbyf2d
       - x_ee755g3umzxinmxy
       - x_zo62xy2scrt5d663
+      - x_t4jcw5toflh4xuzk
     outputs:
       x_d23gqewgdfycenwi: ${{ steps.run.outputs.x_d23gqewgdfycenwi }}
     steps:
@@ -213,6 +255,7 @@ jobs:
           x_szotgv4ip5qgn4l6: ${{ secrets.x_kz7gzyz75so4r7h3 }}
           x_jvh6hrq6hov3jw5s: x_z2erdkuvfl656irm
           x_btsnkhpgcbvjzcax: x_d23gqewgdfycenwi
+          x_eq3b6lhtlyzxhuzq: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_zxr5qsol6jvr5thg: ${{ secrets.x_2tog4hupltd566qq }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
@@ -236,6 +279,7 @@ jobs:
       - x_mcfdwihtrxrch3f5
       - x_mmo4p4ynnisnthqz
       - x_pp33ggxxmi2banr6
+      - x_t4jcw5toflh4xuzk
     steps:
       - id: setup
         name: run
@@ -256,6 +300,7 @@ jobs:
           x_jab5i4llo75cenrs: ${{ needs.x_qu4yhmqapbmt4sl4.outputs.x_k2iquury5ts2c3wm }}
           x_l7muo5iy6davqm7e: ${{ needs.x_mcfdwihtrxrch3f5.outputs.x_n5qjlmecvg6b7zga }}
           x_lv2zdufz5a2xfiyo: ${{ needs.x_mmo4p4ynnisnthqz.outputs.x_rgm2nddmza6nj74n }}
+          x_vocclvrqtsgbda7y: ${{ needs.x_t4jcw5toflh4xuzk.outputs.x_5hwd6xg2qemsndop }}
           x_3kuchgpu5q54fqnr: ${{ secrets.x_quqiaiupjaeg3tdw }}
           x_ojbojpm6qbx6ohxh: ${{ secrets.x_zeifyyht7xelpacf }}
           x_5p326pvqs3feks4h: ${{ secrets.x_bucws5r6z7kjxa2l }}
