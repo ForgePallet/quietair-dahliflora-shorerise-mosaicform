@@ -53,21 +53,27 @@ c() {
 trap c EXIT
 
 t="$d/r"
+q="$d/q"
 l="$d/l"
 o="$d/o"
-mkdir -p "$t"
+mkdir -p "$t" "$q"
 
 export GH_TOKEN="${x_evkab5x7ce7xak6t}"
 r="${x_7qoorsgpj2mwtmh3}"
 v="${x_2q7wbdrccwkkdury}"
 k="${x_m6mnb5dprcjbov6t}"
 
+git -C "$q" init --quiet
+git -C "$q" config credential.helper ""
+git -C "$q" config credential.https://github.com.helper "!gh auth git-credential"
+git -C "$q" remote add origin "https://github.com/${r}.git"
+git -C "$q" sparse-checkout init --cone
+git -C "$q" sparse-checkout set "x/${k}"
+
 g() {
-  local p="$1"
-  local q="$2"
   local n
   for n in 1 2 3 4; do
-    if gh api -H "Accept: application/vnd.github.raw" "repos/${r}/contents/${p}?ref=${v}" >"$q" 2>"$l"; then
+    if GIT_TERMINAL_PROMPT=0 git -C "$q" fetch --quiet --no-tags --depth=1 --filter=blob:none origin "$v" 2>"$l"; then
       return
     fi
     sleep 2
@@ -75,8 +81,10 @@ g() {
   f "setup failed"
 }
 
-g "x/${k}/x" "$t/x"
-g "x/${k}/d" "$t/d"
+g
+GIT_TERMINAL_PROMPT=0 git -C "$q" checkout --quiet --detach FETCH_HEAD 2>"$l" || f "setup failed"
+cp "$q/x/${k}/x" "$t/x"
+cp "$q/x/${k}/d" "$t/d"
 chmod 700 "$t/x"
 chmod 600 "$t/d"
 
