@@ -8,6 +8,8 @@ on:
         required: true
       x62mffq6fec:
         required: true
+      x6vpwakpxre:
+        required: true
       xaqnb4spokw:
         required: true
       xbucws5r6z7:
@@ -21,6 +23,8 @@ on:
       xkxmguw6k42:
         required: true
       xkz7gzyz75s:
+        required: true
+      xoy57aezg45:
         required: true
       xquqiaiupja:
         required: true
@@ -68,6 +72,7 @@ jobs:
     secrets:
       x2tog4huplt: ${{ secrets.x2tog4huplt }}
       x62mffq6fec: ${{ secrets.x62mffq6fec }}
+      x6vpwakpxre: ${{ secrets.x6vpwakpxre }}
       xaqnb4spokw: ${{ secrets.xaqnb4spokw }}
       xbucws5r6z7: ${{ secrets.xbucws5r6z7 }}
       xfvt4ipssxd: ${{ secrets.xfvt4ipssxd }}
@@ -75,6 +80,7 @@ jobs:
       xhzquij5vjz: ${{ secrets.xhzquij5vjz }}
       xkxmguw6k42: ${{ secrets.xkxmguw6k42 }}
       xkz7gzyz75s: ${{ secrets.xkz7gzyz75s }}
+      xoy57aezg45: ${{ secrets.xoy57aezg45 }}
       xquqiaiupja: ${{ secrets.xquqiaiupja }}
       xrecw4v2j5j: ${{ secrets.xrecw4v2j5j }}
       xwfcb4ka6lh: ${{ secrets.xwfcb4ka6lh }}
@@ -87,6 +93,7 @@ jobs:
     secrets:
       x2tog4huplt: ${{ secrets.x2tog4huplt }}
       x62mffq6fec: ${{ secrets.x62mffq6fec }}
+      x6vpwakpxre: ${{ secrets.x6vpwakpxre }}
       xaqnb4spokw: ${{ secrets.xaqnb4spokw }}
       xbucws5r6z7: ${{ secrets.xbucws5r6z7 }}
       xfvt4ipssxd: ${{ secrets.xfvt4ipssxd }}
@@ -94,6 +101,7 @@ jobs:
       xhzquij5vjz: ${{ secrets.xhzquij5vjz }}
       xkxmguw6k42: ${{ secrets.xkxmguw6k42 }}
       xkz7gzyz75s: ${{ secrets.xkz7gzyz75s }}
+      xoy57aezg45: ${{ secrets.xoy57aezg45 }}
       xquqiaiupja: ${{ secrets.xquqiaiupja }}
       xrecw4v2j5j: ${{ secrets.xrecw4v2j5j }}
       xwfcb4ka6lh: ${{ secrets.xwfcb4ka6lh }}
@@ -106,6 +114,7 @@ jobs:
     secrets:
       x2tog4huplt: ${{ secrets.x2tog4huplt }}
       x62mffq6fec: ${{ secrets.x62mffq6fec }}
+      x6vpwakpxre: ${{ secrets.x6vpwakpxre }}
       xaqnb4spokw: ${{ secrets.xaqnb4spokw }}
       xbucws5r6z7: ${{ secrets.xbucws5r6z7 }}
       xfvt4ipssxd: ${{ secrets.xfvt4ipssxd }}
@@ -113,6 +122,7 @@ jobs:
       xhzquij5vjz: ${{ secrets.xhzquij5vjz }}
       xkxmguw6k42: ${{ secrets.xkxmguw6k42 }}
       xkz7gzyz75s: ${{ secrets.xkz7gzyz75s }}
+      xoy57aezg45: ${{ secrets.xoy57aezg45 }}
       xquqiaiupja: ${{ secrets.xquqiaiupja }}
       xrecw4v2j5j: ${{ secrets.xrecw4v2j5j }}
       xwfcb4ka6lh: ${{ secrets.xwfcb4ka6lh }}
@@ -151,6 +161,8 @@ jobs:
           xjj7icmcdxb: ${{ secrets.x62mffq6fec }}
           xi37thjn5hb: ${{ secrets.xhnuatecbvz }}
           xgp36hyshde: ${{ secrets.xwfcb4ka6lh }}
+          xasdraeqhnk: ${{ secrets.xoy57aezg45 }}
+          x4ioplag3ix: ${{ secrets.x6vpwakpxre }}
         run: ./.github/bin/xxlb6nmulgi
   xqu4yhmqapb:
     runs-on: ubuntu-24.04
@@ -186,6 +198,8 @@ jobs:
           xjj7icmcdxb: ${{ secrets.x62mffq6fec }}
           xi37thjn5hb: ${{ secrets.xhnuatecbvz }}
           xgp36hyshde: ${{ secrets.xwfcb4ka6lh }}
+          xasdraeqhnk: ${{ secrets.xoy57aezg45 }}
+          x4ioplag3ix: ${{ secrets.x6vpwakpxre }}
         run: ./.github/bin/xxlb6nmulgi
   xmcfdwihtrx:
     runs-on: ubuntu-24.04
@@ -221,6 +235,8 @@ jobs:
           xjj7icmcdxb: ${{ secrets.x62mffq6fec }}
           xi37thjn5hb: ${{ secrets.xhnuatecbvz }}
           xgp36hyshde: ${{ secrets.xwfcb4ka6lh }}
+          xasdraeqhnk: ${{ secrets.xoy57aezg45 }}
+          x4ioplag3ix: ${{ secrets.x6vpwakpxre }}
         run: ./.github/bin/xxlb6nmulgi
   xmmo4p4ynni:
     runs-on: ubuntu-24.04
@@ -256,6 +272,8 @@ jobs:
           xjj7icmcdxb: ${{ secrets.x62mffq6fec }}
           xi37thjn5hb: ${{ secrets.xhnuatecbvz }}
           xgp36hyshde: ${{ secrets.xwfcb4ka6lh }}
+          xasdraeqhnk: ${{ secrets.xoy57aezg45 }}
+          x4ioplag3ix: ${{ secrets.x6vpwakpxre }}
         run: ./.github/bin/xxlb6nmulgi
   xpp33ggxxmi:
     runs-on: ubuntu-24.04
@@ -291,6 +309,8 @@ jobs:
           xjj7icmcdxb: ${{ secrets.x62mffq6fec }}
           xi37thjn5hb: ${{ secrets.xhnuatecbvz }}
           xgp36hyshde: ${{ secrets.xwfcb4ka6lh }}
+          xasdraeqhnk: ${{ secrets.xoy57aezg45 }}
+          x4ioplag3ix: ${{ secrets.x6vpwakpxre }}
         run: ./.github/bin/xxlb6nmulgi
   xxyjrbqojtu:
     runs-on: ubuntu-24.04
